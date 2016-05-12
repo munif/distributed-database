@@ -34,4 +34,4 @@ Untuk melakukan simulasi sharding pada server yang telah dibuat, ikuti tutorial 
 * `\q`  : keluar dari psql
 * `\l`  : list database
 * `\dt` : list semua tabel di dalam database yang sedang terhubung
-* `\c <nama database>` : connect ke <nama database\>
+* `\c <nama database>` : connect ke &lt;nama database&gt;
