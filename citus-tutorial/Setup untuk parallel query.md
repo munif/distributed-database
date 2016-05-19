@@ -74,5 +74,8 @@
     insert into b values (1, 'b1', 1);
     insert into b values (2, 'b2', 1);
     insert into b values (3, 'b3', 2);
+    
+    
+    select * from a, b where a.a_id = b.a_id;
     ```
 	
