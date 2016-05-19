@@ -17,24 +17,33 @@
 
 ## Menambahkan `.pgpass` untuk bypass password di semua node (master dan worker)
 1. Login sebagai postgres
+   
    ```
    sudo -i -u postgres
    ```
+   
 2. Create file .pgpass
+
    ```
    nano .pgpass
    ```
-3. Isi .pgpass dengan format
+   
+3. Isi .pgpass dengan format seperti berikut.
+
    ```
    # hostname:port:database:username:password
    *:*:*:postgres:postgres
    ```
+   
    Tanda `*` berarti wildcard
 4. Ubah *permission* `.pgpass` menjadi 0600.
+
    ```
    chomd 0600 .pgpass
    ```
+   
 5. Reset postgres
+
    ```
    sudo service postgresql restart
    ```
