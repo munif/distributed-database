@@ -14,8 +14,6 @@
 Untuk melakukan instalasi PostgreSQL+Citus, ikuti langkah-langkah yang ada di
 [Multi-node setup on Ubuntu or Debian](https://www.citusdata.com/docs/citus/5.0/installation/production_deb.html).
 
-Apabila ada kesulitan dalam mengunduh data 
-
 ## Testing
 Untuk melakukan simulasi sharding pada server yang telah dibuat, ikuti tutorial [Hash Distribution](https://www.citusdata.com/docs/citus/5.0/dist_tables/hash_distribution.html).
 > **Catatan**
