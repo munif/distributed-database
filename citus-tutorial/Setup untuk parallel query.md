@@ -22,13 +22,13 @@
    sudo -i -u postgres
    ```
    
-2. Create file .pgpass
+2. Create file `.pgpass`
 
    ```
    nano .pgpass
    ```
    
-3. Isi .pgpass dengan format seperti berikut.
+3. Isi `.pgpass` dengan format seperti berikut.
 
    ```
    # hostname:port:database:username:password
