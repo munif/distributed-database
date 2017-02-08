@@ -22,13 +22,13 @@
    sudo -i -u postgres
    ```
    
-2. Create file .pgpass
+2. Create file `.pgpass`
 
    ```
    nano .pgpass
    ```
    
-3. Isi .pgpass dengan format seperti berikut.
+3. Isi `.pgpass` dengan format seperti berikut.
 
    ```
    # hostname:port:database:username:password
@@ -50,32 +50,29 @@
 	
 
 ## Script database untuk data contoh
+   ```
+   create table a(a_id int, a_name text);
+   create table b(b_id int, b_desc text, a_id int);
 
-    ```
-    create table a(a_id int, a_name text);
-    create table b(b_id int, b_desc text, a_id int);
 
+   select master_create_distributed_table('a', 'a_id', 'hash');
+   select master_create_worker_shards('a', 6, 3);
 
-    select master_create_distributed_table('a', 'a_id', 'hash');
-    select master_create_worker_shards('a', 6, 3);
+   # Opsi 1: Repartition --> Lama
+   select master_create_distributed_table('b', 'b_id', 'hash');
+   select master_create_worker_shards('b', 6, 3);
 
-    # Opsi 1: Repartition --> Lama
-    select master_create_distributed_table('b', 'b_id', 'hash');
-    select master_create_worker_shards('b', 6, 3);
+   # Opsi 2: Colocated join -> relatif lebih cepat
+   select master_create_distributed_table('b', 'a_id', 'hash');
+   select master_create_worker_shards('b', 6, 3);
 
-    # Opsi 2: Colocated join -> relatif lebih cepat
-    select master_create_distributed_table('b', 'a_id', 'hash');
-    select master_create_worker_shards('b', 6, 3);
+   insert into a values (1, 'a1');
+   insert into a values (2, 'a2');
+   insert into a values (3, 'a3');
 
-    insert into a values (1, 'a1');
-    insert into a values (2, 'a2');
-    insert into a values (3, 'a3');
-
-    insert into b values (1, 'b1', 1);
-    insert into b values (2, 'b2', 1);
-    insert into b values (3, 'b3', 2);
+   insert into b values (1, 'b1', 1);
+   insert into b values (2, 'b2', 1);
+   insert into b values (3, 'b3', 2);
     
-    
-    select * from a, b where a.a_id = b.a_id;
-    ```
-	
+   select * from a, b where a.a_id = b.a_id;
+   ```
