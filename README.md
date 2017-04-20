@@ -1,4 +1,7 @@
 # Distributed Database
+## Exercise → MongoDB
+Please choose your schedule here ...
+
 ## References
 1.  M. T. Ozsu and P. Valduriez, Principles of Distributed Database Systems, Third Edition. New York: Springer, 2011.
 2. S. K. Rahimi and F. S. Haug, Distributed Database Management Systems: A Practical Approach. Hoboken, New Jersey: John Wiley & Sons, Inc., 2010.
