@@ -1,6 +1,14 @@
 # Distributed Database
 
 ## 2016-2017
+### Exercise → Apache Cassandra
+Kerjakan course yang ada di [3] dengan judul **DS201: DataStax Enterprise Foundations of Apache Cassandra™**.
+
+#### Referensi
+[1] http://cassandra.apache.org/  
+[2] http://www.guru99.com/cassandra-tutorial.html  
+[3] https://academy.datastax.com/courses  
+
 ### Guest Lecture "Research in Text Mining"
 Ikuti kuliah tamu "Research in Text Mining" hari ini, Kamis 27 April 2017 jam 13.00-15.00.  
 #### Tugas
