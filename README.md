@@ -1,6 +1,25 @@
 # Distributed Database
 
 ## 2016-2017
+---
+### EAS (Apache Cassandra dan Solr)
+#### Penilaian
+1. Instalasi Apache Cassandra (atau menggunakan yang ada di DS310).  
+2. Instalasi Apache Solr.  
+3. Mencari dataset untuk dimasukkan ke dalam Apache Cassandra. Untuk memasukkan data dapat menggunakan script program (PHP, Python, dsb.), atau import dalam format ke CSV. Apabila menggunakan format CSV pastikan kolom ID sudah diisi dengan UUID atau TIMEUUID.  
+4. Memilih tabel yang akan dijadikan indeks pencarian teks.  
+5. Membuat konfigurasi schema indexing Solr.  
+6. Membuat aplikasi CRUD dengan basis data Apache Cassandra.  
+7. Pada aplikasi ada fitur searching memanfaatkan Solr (min. 2 tabel).  
+
+### Contoh dataset:
+1. [MovieLens Dataset](https://grouplens.org/datasets/movielens/)
+2. [UCI KDD Archive](http://archive.ics.uci.edu/ml/datasets.html) -> cari yang bertipe teks.
+
+### Jadwal Demo
+Direncanakan tanggal 31 Mei - 2 Juni 2017.
+
+---
 ### Exercise → Apache Cassandra
 Kerjakan course yang ada di [3] dengan judul **DS201: DataStax Enterprise Foundations of Apache Cassandra™**.
 
