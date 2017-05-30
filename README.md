@@ -7,7 +7,8 @@
 Isi jadwal demo pada http://bit.ly/DemoFPBDT1617
 
 #### Penilaian
-1. Instalasi Apache Cassandra (atau menggunakan yang ada di DS310).  
+Instalasi Apache Cassandra dan Solr
+1. Instalasi Apache Cassandra (atau dapat menggunakan yang ada di DS310).  
 2. Instalasi Apache Solr (atau dapat menggunakan yang ada di DS310).
 
 Apache Cassandra
